@@ -9,7 +9,6 @@ const initialState = { //
     notification: false
 }
 
-
 export const ContextProvider = ({ children }) => {
 
     const [activeMenu, setActiveMenu] = useState(true);
