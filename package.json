@@ -20,9 +20,9 @@
     "react-scripts": "5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "next start",
+    "build": "next build",
+    "test": "next test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
