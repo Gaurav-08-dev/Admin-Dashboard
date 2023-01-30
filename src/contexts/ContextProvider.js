@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const StateContext = createContext();
 
@@ -23,14 +23,14 @@ export const ContextProvider = ({ children }) => {
 
         setCurrentMode(e.target.value);
         localStorage.setItem('themeMode', e.target.value)
-        setThemeSettings(false)
+        // setThemeSettings(false)
     }
 
     const setColor = (mode) => {
 
         setCurrentColor(mode);
         localStorage.setItem('colorMode', mode)
-        setThemeSettings(false)
+        // setThemeSettings(false)
 
     }
 
@@ -38,6 +38,14 @@ export const ContextProvider = ({ children }) => {
         setIsClicked({ ...initialState, [clicked]: true })
     }
 
+    useEffect(()=>{
+        const currentThemeSelected=localStorage.getItem('themeMode')
+        if(currentThemeSelected) setCurrentMode(currentThemeSelected)
+
+        const currentColorSelected=localStorage.getItem('colorMode')
+        if(currentColorSelected) setCurrentColor(currentColorSelected)
+        
+    },[])
     return ( // we can also provide stateContext.provider
         <StateContext.Provider
             value={{

@@ -83,6 +83,9 @@ const App = () => {
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
 
+
+                <Route path="*" element={<Ecommerce />} />
+
               </Routes>
             </div>
             <Footer />
