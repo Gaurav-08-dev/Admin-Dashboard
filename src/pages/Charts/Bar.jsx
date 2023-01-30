@@ -3,10 +3,10 @@ import { Header } from '../../components';
 import {
   ChartComponent,
   SeriesCollectionDirective,
-  SeriesDirective, Inject, DateTime, Legend, SplineAreaSeries
+  SeriesDirective, Inject, Legend, Category, Tooltip,ColumnSeries,DataLabel
 } from '@syncfusion/ej2-react-charts';
 
-import { areaCustomSeries, areaPrimaryYAxis, areaPrimaryXAxis } from '../../data/dummy';
+import { barCustomSeries, barPrimaryYAxis, barPrimaryXAxis } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
 
 const Bar = () => {
@@ -15,22 +15,22 @@ const Bar = () => {
 
   return (
     <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl'>
-    <Header category="Area" title="Inflation Rate in Percentage" />
+    <Header category="Area" title="Olympic Medal Counts - RIO" />
 
     <ChartComponent
       id="bar-chart"
       height="420px"
-      primaryXAxis={areaPrimaryXAxis}
-      primaryYAxis={areaPrimaryYAxis}
+      primaryXAxis={barPrimaryXAxis}
+      primaryYAxis={barPrimaryYAxis}
       chartArea={{ border: { width: 0 } }}
       tooltip={{ enable: true }}
       background={currentMode === 'Dark' ? '#33373e' : '#fff'}
 
     >
-      <Inject services={[SplineAreaSeries, DateTime, Legend,]} />
+      <Inject services={[ColumnSeries,Tooltip, Legend, Category,DataLabel]} />
       <SeriesCollectionDirective>
         {
-          areaCustomSeries.map((item, index) => <SeriesDirective
+          barCustomSeries.map((item, index) => <SeriesDirective
             key={index} {...item} />)
         }
       </SeriesCollectionDirective>
