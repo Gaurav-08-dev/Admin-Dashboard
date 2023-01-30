@@ -9,9 +9,9 @@ import { useStateContext } from './contexts/ContextProvider';
 
 const App = () => {
 
-  const { activeMenu, themeSettings, setThemeSettings, currentColor , currentMode} = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
   return (
-    <div className={currentMode==='Dark'?'dark':''}>
+    <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>
           <div className='fixed right-4 bottom-4' style={{ zIndex: '1000' }}>
@@ -85,6 +85,7 @@ const App = () => {
 
               </Routes>
             </div>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>
