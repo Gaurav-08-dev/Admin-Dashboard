@@ -49,7 +49,7 @@ const Navbar = () => {
     if (screenSize <= 900) {
       setActiveMenu(false)
     }
-    else { setActiveMenu(true) }
+    // else { setActiveMenu(true) }
   }, [screenSize]);
 
 

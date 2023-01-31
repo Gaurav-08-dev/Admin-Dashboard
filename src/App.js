@@ -7,6 +7,7 @@ import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Ka
 import './App.css';
 import { useStateContext } from './contexts/ContextProvider';
 
+
 const App = () => {
 
   const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
@@ -31,16 +32,19 @@ const App = () => {
               </button>
             </TooltipComponent>
           </div>
+
+
           {
             activeMenu ? (
               <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
                 <Sidebar />
               </div>
-            ) : (
+            ) : ''
+          }
+            {/* (
               <div className='w-0 dark:bg-secondary-dark-bg'>
                 <Sidebar />
-              </div>)
-          }
+              </div>) */}
 
           <div className={
             activeMenu
