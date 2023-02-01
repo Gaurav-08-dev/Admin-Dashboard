@@ -10,27 +10,16 @@ Admin Dashboard created using React JS and Syncfusion
 
 Dark mode
 
-![image](https://user-images.githubusercontent.com/59278476/141690222-caade0d3-f7e9-4321-ba2b-cf5f44c45436.png)
+<img width="1674" alt="Screenshot 2023-02-01 at 10 04 10 PM" src="https://user-images.githubusercontent.com/59278476/216104564-57a6f9fb-8402-4f13-8078-b80a00cd247e.png">
 
 Light mode
 
-![image](https://user-images.githubusercontent.com/59278476/141690254-b96c94a6-ede4-4564-9c8a-c5383b156285.png)
+<img width="1674" alt="Screenshot 2023-02-01 at 10 05 48 PM" src="https://user-images.githubusercontent.com/59278476/216104987-74bdfb46-9574-4dd4-8a9e-a7f66ea73182.png">
 
 
 
 
-  
-
-
-
-
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+# Usage
 
 In the project directory, you can run:
 
