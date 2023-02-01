@@ -19,6 +19,7 @@ export const ContextProvider = ({ children }) => {
     const [themeSettings, setThemeSettings] = useState(false);
 
 
+
     const setMode = (e) => {
 
         setCurrentMode(e.target.value);
@@ -35,7 +36,7 @@ export const ContextProvider = ({ children }) => {
     }
 
     const handleClick = (clicked) => {
-        setIsClicked({ ...initialState, [clicked]: true })
+        setIsClicked((prev)=>({ ...initialState, [clicked]: !prev[clicked] }))
     }
 
     useEffect(()=>{

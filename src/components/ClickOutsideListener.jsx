@@ -10,7 +10,7 @@ export const ClickOutsideListener = ({ onClose, children }) => {
   const clickListener = useCallback(
     (e) => {
 
-        if(!ref.current) return;
+      if(!ref.current) return;
       if (!(ref.current).contains(e.target)) {
         onClose?.() // using optional chaining here, change to onClose && onClose(), if required
       }

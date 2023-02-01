@@ -5,19 +5,18 @@ import {
   AccumulationSeriesDirective, Inject, AccumulationLegend, AccumulationTooltip, PieSeries, AccumulationDataLabel
 } from '@syncfusion/ej2-react-charts';
 
-import { pieChartData } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
 
 
-const Pie = () => {
+const Pie = ({ id, data, legendVisiblity, height }) => {
 
   const { currentMode } = useStateContext();
 
   return (
     <AccumulationChartComponent
-      id="pie-chart"
-      height="full"
-      legendSettings={{ visible: true, background: 'white' }}
+      id={id}
+      height={height}
+      legendSettings={{ visible: legendVisiblity, background: 'white' }}
       tooltip={{ enable: true }}
       background={currentMode === 'Dark' ? '#33373e' : '#fff'}
 
@@ -27,7 +26,7 @@ const Pie = () => {
         <AccumulationSeriesDirective
 
           name="Sale"
-          dataSource={pieChartData}
+          dataSource={data}
           type="Pie"
           xName="x"
           yName="y"
